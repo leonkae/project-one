@@ -2,25 +2,61 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
-
-.main-wrapper {
-  border: 3px solid blue;
-}
-
 .nav-holder {
-  border: 3px solid red;
+  background-color: rgb(255, 253, 248);
 }
 .nav-holder nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .nav-holder nav a {
   text-decoration: none;
   margin: 10px;
   font-weight: 400;
+  color: rgb(15, 15, 15);
 }
 .nav-title h1 {
   font-size: 25px;
   font-weight: 400;
+  margin: 30px;
+  color: rgb(15, 15, 15);
+}
+.my-profile {
+  position: relative;
+  height: 50vh;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-profile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 0;
+}
+.my-profile > * {
+    position: relative;
+    z-index: 1;
+}
+
+.my-profile-info {
+  height: 300px;
+  width: 300px;
+}
+.my-profile-info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid white;
 }
